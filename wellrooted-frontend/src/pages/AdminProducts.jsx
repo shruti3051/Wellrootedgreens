@@ -42,17 +42,14 @@ function AdminProducts() {
       setSubmitting(true);
       setFormError("");
 
-      // STEP 1: Make sure an image was selected
       if (!imageFile) {
         throw new Error("Please select a product image");
       }
 
-      // STEP 2: Prepare image for upload
       const imageFormData = new FormData();
 
       imageFormData.append("image", imageFile);
 
-      // STEP 3: Upload image to Cloudinary through our backend
       const imageResponse = await fetch(
         "http://localhost:5000/api/upload/product-image",
         {
@@ -72,10 +69,8 @@ function AdminProducts() {
         throw new Error(imageData.message || "Failed to upload product image");
       }
 
-      // STEP 4: Cloudinary URL
       const imageUrl = imageData.imageUrl;
 
-      // STEP 5: Create product
       const response = await fetch("http://localhost:5000/api/products", {
         method: "POST",
 
@@ -91,8 +86,6 @@ function AdminProducts() {
           price: Number(formData.price),
           weight: formData.weight.trim(),
           stock: Number(formData.stock),
-
-          // NEW
           image: imageUrl,
         }),
       });
@@ -103,7 +96,6 @@ function AdminProducts() {
         throw new Error(data.message || "Failed to add product");
       }
 
-      // STEP 6: Update admin UI
       setProducts((previousProducts) => [data, ...previousProducts]);
 
       setSuccessMessage("Product added successfully");
@@ -231,8 +223,6 @@ function AdminProducts() {
             price: Number(formData.price),
             weight: formData.weight.trim(),
             stock: Number(formData.stock),
-
-            // IMPORTANT
             image: imageUrl,
           }),
         },
@@ -370,7 +360,6 @@ function AdminProducts() {
 
   return (
     <section className="admin-products">
-      {/* SUCCESS TOAST */}
       {successMessage && (
         <div className="admin-success-toast">
           <span>✓</span>
@@ -382,8 +371,6 @@ function AdminProducts() {
           </button>
         </div>
       )}
-
-      {/* delete */}
 
       {productToDelete && (
         <div

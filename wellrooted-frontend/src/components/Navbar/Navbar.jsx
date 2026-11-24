@@ -9,12 +9,10 @@ import "./Navbar.css";
 function Navbar() {
   const { user, logout, loading } = useContext(AuthContext);
   const navLinks = [
-    // { name: "HOME", path: "/" },
     { name: "SHOP", path: "/shop" },
     { name: "OUR STORY", path: "/our-story" },
     { name: "FROM SEED TO PLATE", path: "/seed-to-plate" },
     { name: "LEARN", path: "/learn" },
-    // { name: "CONTACT", path: "/contact" },
   ];
   const [menuOpen, setMenuOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);

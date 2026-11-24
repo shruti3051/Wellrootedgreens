@@ -5,8 +5,6 @@ import { Sprout, Leaf, MapPin, Heart, ArrowRight, Sun } from "lucide-react";
 function OurStory() {
   return (
     <main className="our-story-page">
-      {/* ================= HERO ================= */}
-
       <section className="story-hero">
         <div className="story-hero-glow story-glow-one"></div>
         <div className="story-hero-glow story-glow-two"></div>
@@ -36,8 +34,6 @@ function OurStory() {
           <div className="story-scroll-line"></div>
         </div>
       </section>
-
-      {/* ================= WHY WE STARTED ================= */}
 
       <section className="story-origin-section">
         <div className="story-container story-origin-grid">
@@ -89,8 +85,6 @@ function OurStory() {
           </div>
         </div>
       </section>
-
-      {/* ================= PHILOSOPHY ================= */}
 
       <section className="story-philosophy-section">
         <div className="story-container">
@@ -150,8 +144,6 @@ function OurStory() {
           </div>
         </div>
       </section>
-
-      {/* ================= JOURNEY ================= */}
 
       <section className="story-journey-section">
         <div className="story-container story-journey-grid">
@@ -233,8 +225,6 @@ function OurStory() {
         </div>
       </section>
 
-      {/* ================= LOCAL ================= */}
-
       <section className="story-local-section">
         <div className="story-local-background-text">PUNE</div>
 
@@ -279,8 +269,6 @@ function OurStory() {
           </div>
         </div>
       </section>
-
-      {/* ================= FINAL CTA ================= */}
 
       <section className="story-cta-section">
         <div className="story-cta-icon">

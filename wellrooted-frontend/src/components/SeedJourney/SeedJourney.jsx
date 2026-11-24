@@ -101,8 +101,6 @@ function SeedJourney() {
       </div>
 
       <div className="journey-container">
-        {/* LEFT — SCROLLING STAGES */}
-
         <div className="journey-stages">
           {stages.map((stage) => (
             <div
@@ -120,7 +118,6 @@ function SeedJourney() {
                   <p>{stage.description}</p>
                 </div>
 
-                {/* MOBILE ONLY */}
                 <div className="mobile-stage-image">
                   <img src={stage.image} alt={stage.title} />
                 </div>
@@ -128,8 +125,6 @@ function SeedJourney() {
             </div>
           ))}
         </div>
-
-        {/* RIGHT — STICKY REAL IMAGES */}
 
         <div className="journey-visual">
           <div className="journey-image-container">

@@ -1,6 +1,5 @@
 const multer = require("multer");
 
-// Store uploaded file temporarily in memory
 const storage = multer.memoryStorage();
 
 const fileFilter = (req, file, cb) => {

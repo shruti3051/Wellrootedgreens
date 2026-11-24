@@ -129,10 +129,6 @@
   font-size: 22px;
 }
 
-/* ============================= */
-/* Tablet: 768px–1024px */
-/* ============================= */
-
 @media (max-width: 1024px) {
   .hero {
     min-height: 100vh;
@@ -163,10 +159,6 @@
     font-size: 20px;
   }
 }
-
-/* ============================= */
-/* Small tablet and mobile */
-/* ============================= */
 
 @media (max-width: 768px) {
   .hero {
@@ -234,10 +226,6 @@
     padding: 12px 0;
   }
 }
-
-/* ============================= */
-/* Small mobile */
-/* ============================= */
 
 @media (max-width: 480px) {
   .hero {
@@ -370,7 +358,6 @@
 
   width: 100%;
 
-  /* Important */
   align-items: stretch;
 }
 
@@ -382,7 +369,6 @@
   width: 100%;
   min-width: 0;
 
-  /* Let content decide card height */
   height: auto;
   min-height: 100%;
 
@@ -393,8 +379,6 @@
   border-radius: 20px;
 
   background: #0d2d1c;
-
-  /* Keep rounded image/card edges */
   overflow: hidden;
 
   cursor: pointer;
@@ -414,8 +398,6 @@
     0 18px 40px rgba(0, 0, 0, 0.28),
     0 0 30px rgba(143, 175, 101, 0.06);
 }
-
-/* ---------- IMAGE ---------- */
 
 .modal-image {
   overflow: hidden;
@@ -455,8 +437,6 @@
   background: rgba(143, 175, 101, 0.08);
 }
 
-/* ---------- CARD INFORMATION ---------- */
-
 .shop-card-content {
   padding: 22px 20px 20px;
 
@@ -487,8 +467,6 @@
   line-height: 1.6;
 }
 
-/* ---------- PRICE + VIEW ---------- */
-
 .shop-card-bottom {
   display: flex;
   align-items: center;
@@ -509,7 +487,6 @@
 }
 
 .shop-card-bottom button {
-  /* width: 75px; */
   height: 38px;
 
   border: 1px solid rgba(143, 175, 101, 0.5);
@@ -539,10 +516,6 @@
   transform: translateX(2px);
 }
 
-/* ===================================
-   PRODUCT DETAIL MODAL
-=================================== */
-
 .product-modal-overlay {
   position: fixed;
   inset: 0;
@@ -557,8 +530,6 @@
   background: rgba(3, 15, 9, 0.82);
   backdrop-filter: blur(10px);
 }
-
-/* MODAL BOX */
 
 .product-modal {
   position: relative;
@@ -593,8 +564,6 @@
     transform: translateY(0) scale(1);
   }
 }
-
-/* CLOSE BUTTON */
 
 .modal-close {
   position: absolute;
@@ -632,16 +601,12 @@
   transform: rotate(90deg);
 }
 
-/* LARGE IMAGE SIDE */
-
 .modal-image {
   width: 100%;
   min-height: 520px;
 
   background: #eeece2;
 }
-
-/* DETAILS SIDE */
 
 .modal-content {
   display: flex;
@@ -699,8 +664,6 @@
   line-height: 1.8;
 }
 
-/* PRICE + CART */
-
 .modal-footer {
   display: flex;
   align-items: center;
@@ -734,8 +697,6 @@
 
   font-size: 13px;
 }
-
-/* ADD TO CART */
 
 .modal-cart-btn {
   display: flex;
@@ -796,9 +757,6 @@
   font-size: 18px;
   font-weight: 600;
 }
-/* =========================
-   TABLET
-========================= */
 
 @media (max-width: 1024px) {
   .shop-page {
@@ -821,10 +779,6 @@
     font-size: 42px;
   }
 }
-
-/* =========================
-   SMALL TABLET
-========================= */
 
 @media (max-width: 768px) {
   .shop-page {
@@ -861,10 +815,6 @@
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
-
 @media (max-width: 520px) {
   .shop-page {
     padding: 135px 18px 60px;
@@ -887,8 +837,6 @@
   .shop-card-image {
     height: 250px;
   }
-
-  /* Modal */
 
   .product-modal-overlay {
     padding: 12px;
@@ -930,7 +878,6 @@
   }
 }
 
-/* Order-sucess */
 .order-success-page {
   min-height: 100vh;
 
@@ -1069,7 +1016,6 @@
   }
 }
 
-/* My Orders */
 .my-orders-page {
   min-height: 100vh;
   padding: 180px 6% 100px;
@@ -1082,10 +1028,6 @@
     #0b2416;
   color: #f5f1e6;
 }
-
-/* ================================
-   HEADER
-================================ */
 
 .my-orders-header {
   max-width: 1200px;
@@ -1115,10 +1057,6 @@
   color: #8faf65;
 }
 
-/* ================================
-   ORDER LIST
-================================ */
-
 .orders-list {
   width: 100%;
   max-width: 1200px;
@@ -1129,10 +1067,6 @@
 
   margin: 0 auto;
 }
-
-/* ================================
-   ORDER CARD
-================================ */
 
 .order-card {
   padding: 28px 32px;
@@ -1155,10 +1089,6 @@
 
   background: rgba(255, 255, 255, 0.04);
 }
-
-/* ================================
-   CARD HEADER
-================================ */
 
 .order-card-header {
   display: flex;
@@ -1192,10 +1122,6 @@
   letter-spacing: 1px;
 }
 
-/* ================================
-   STATUS
-================================ */
-
 .order-status {
   padding: 7px 14px;
 
@@ -1218,10 +1144,6 @@
   font-size: 14px;
   opacity: 0.8;
 }
-
-/* ================================
-   ITEMS
-================================ */
 
 .order-items {
   padding: 12px 0;
@@ -1264,10 +1186,6 @@
   font-weight: 600;
 }
 
-/* ================================
-   FOOTER
-================================ */
-
 .order-card-footer {
   display: flex;
   align-items: flex-end;
@@ -1307,10 +1225,6 @@
   font-family: Georgia, "Times New Roman", serif;
   font-size: 23px;
 }
-
-/* ================================
-   EMPTY + ERROR
-================================ */
 
 .no-orders,
 .orders-error {
@@ -1417,7 +1331,6 @@
   }
 }
 
-/* Dashboard */
 .admin-dashboard {
   width: 100%;
 }
@@ -1451,8 +1364,6 @@
 .admin-dashboard-header > p:last-child {
   color: rgba(245, 241, 230, 0.55);
 }
-
-/* STATS */
 
 .dashboard-stats {
   display: grid;
@@ -1500,8 +1411,6 @@
   font-weight: 400;
 }
 
-/* RECENT ORDERS */
-
 .dashboard-recent {
   padding: 25px;
 
@@ -1533,8 +1442,6 @@
   font-size: 27px;
   font-weight: 400;
 }
-
-/* TABLE */
 
 .dashboard-table-wrapper {
   width: 100%;
@@ -1575,8 +1482,6 @@
   border-bottom: 1px solid rgba(245, 241, 230, 0.05);
 }
 
-/* STATUS */
-
 .dashboard-status {
   display: inline-block;
 
@@ -1593,11 +1498,6 @@
 
   text-transform: capitalize;
 }
-/* ========================================
-   ADMIN DASHBOARD RESPONSIVE
-======================================== */
-
-/* TABLET */
 
 @media (max-width: 1100px) {
   .dashboard-stats {
@@ -1608,8 +1508,6 @@
     min-height: 130px;
   }
 }
-
-/* MOBILE */
 
 @media (max-width: 768px) {
   .admin-dashboard-header {
@@ -1625,8 +1523,6 @@
     font-size: 14px;
     line-height: 1.6;
   }
-
-  /* STATS */
 
   .dashboard-stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1652,8 +1548,6 @@
     font-size: 30px;
   }
 
-  /* RECENT ORDERS */
-
   .dashboard-recent {
     padding: 20px 15px;
   }
@@ -1666,8 +1560,6 @@
     font-size: 23px;
   }
 
-  /* TABLE */
-
   .dashboard-orders-table th {
     padding: 12px 10px;
   }
@@ -1679,8 +1571,6 @@
   }
 }
 
-/* SMALL MOBILE */
-
 @media (max-width: 480px) {
   .admin-dashboard-header h1 {
     font-size: 29px;
@@ -1691,8 +1581,6 @@
 
     letter-spacing: 3px;
   }
-
-  /* ONE CARD PER ROW */
 
   .dashboard-stats {
     grid-template-columns: 1fr;
@@ -1712,8 +1600,6 @@
     padding: 17px 12px;
   }
 }
-
-/* Admin Products */
 
 .admin-image-preview {
   margin-top: 12px;
@@ -1783,8 +1669,6 @@
   font-size: 14px;
 }
 
-/* ADD BUTTON */
-
 .admin-add-product {
   padding: 13px 20px;
 
@@ -1808,8 +1692,6 @@
   transform: translateY(-2px);
   opacity: 0.9;
 }
-
-/* PANEL */
 
 .admin-products-panel {
   border: 1px solid rgba(245, 241, 230, 0.08);
@@ -1838,8 +1720,6 @@
 .admin-products-summary strong {
   color: #f5f1e6;
 }
-
-/* TABLE */
 
 .admin-products-table-wrapper {
   width: 100%;
@@ -1879,8 +1759,6 @@
 
   border-bottom: 1px solid rgba(245, 241, 230, 0.05);
 }
-
-/* PRODUCT */
 
 .admin-product-name {
   display: flex;
@@ -1928,8 +1806,6 @@
   text-overflow: ellipsis;
 }
 
-/* STOCK */
-
 .inventory-status {
   display: inline-block;
 
@@ -1955,8 +1831,6 @@
   background: rgba(207, 92, 92, 0.1);
   color: #cf5c5c;
 }
-
-/* ACTIONS */
 
 .admin-product-actions {
   display: flex;
@@ -1986,8 +1860,6 @@
   color: #cf7474;
 }
 
-/* EMPTY */
-
 .admin-products-empty {
   padding: 50px 20px;
 
@@ -1995,10 +1867,6 @@
 
   color: rgba(245, 241, 230, 0.45);
 }
-
-/* ===============================
-   PRODUCT MODAL
-================================ */
 
 .admin-modal-overlay {
   position: fixed;
@@ -2033,8 +1901,6 @@
 
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
 }
-
-/* HEADER */
 
 .admin-modal-header {
   display: flex;
@@ -2076,8 +1942,6 @@
 
   cursor: pointer;
 }
-
-/* FORM */
 
 .admin-form-group {
   display: flex;
@@ -2130,8 +1994,6 @@
   gap: 15px;
 }
 
-/* ERROR */
-
 .admin-form-error {
   margin: 5px 0 15px;
 
@@ -2139,8 +2001,6 @@
 
   font-size: 12px;
 }
-
-/* BUTTONS */
 
 .admin-form-actions {
   display: flex;
@@ -2340,9 +2200,6 @@
   opacity: 0.55;
   cursor: not-allowed;
 }
-/* =========================
-   TABLET
-========================= */
 
 @media (max-width: 1024px) {
   .admin-products-header {
@@ -2358,10 +2215,6 @@
     min-width: 850px;
   }
 }
-
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width: 768px) {
   .admin-products-header {
@@ -2387,7 +2240,6 @@
     margin-bottom: 16px;
   }
 
-  /* Keep table scrollable instead of crushing columns */
   .admin-products-table-wrapper {
     width: 100%;
     overflow-x: auto;
@@ -2396,8 +2248,6 @@
   .admin-products-table {
     min-width: 800px;
   }
-
-  /* ADD / EDIT MODAL */
 
   .admin-product-modal {
     width: calc(100% - 30px);
@@ -2410,14 +2260,10 @@
     grid-template-columns: 1fr;
   }
 
-  /* DELETE MODAL */
-
   .admin-delete-modal {
     width: calc(100% - 30px);
     padding: 24px 20px;
   }
-
-  /* SUCCESS TOAST */
 
   .admin-success-toast {
     top: 120px;
@@ -2427,10 +2273,6 @@
     min-width: 0;
   }
 }
-
-/* =========================
-   SMALL MOBILE
-========================= */
 
 @media (max-width: 480px) {
   .admin-products-header h1 {
@@ -2473,8 +2315,6 @@
     font-size: 24px;
   }
 }
-
-/* order */
 
 .admin-orders {
   width: 100%;
@@ -2656,42 +2496,30 @@
   white-space: nowrap;
 }
 
-/* PENDING */
-
 .status-pending {
   background: rgba(220, 170, 70, 0.12);
   color: #d9b66f;
 }
-
-/* CONFIRMED */
 
 .status-confirmed {
   background: rgba(100, 150, 220, 0.12);
   color: #91b6e8;
 }
 
-/* PREPARING */
-
 .status-preparing {
   background: rgba(170, 120, 210, 0.12);
   color: #c39be3;
 }
-
-/* OUT FOR DELIVERY */
 
 .status-out-for-delivery {
   background: rgba(80, 170, 170, 0.12);
   color: #82cccc;
 }
 
-/* DELIVERED */
-
 .status-delivered {
   background: rgba(143, 175, 101, 0.14);
   color: #a7c77d;
 }
-
-/* CANCELLED */
 
 .status-cancelled {
   background: rgba(210, 80, 80, 0.12);
@@ -2755,8 +2583,6 @@
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
 }
 
-/* HEADER */
-
 .admin-order-modal-header {
   display: flex;
   justify-content: space-between;
@@ -2794,8 +2620,6 @@
   cursor: pointer;
 }
 
-/* CUSTOMER INFORMATION */
-
 .admin-order-info-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2829,8 +2653,6 @@
   font-weight: 500;
 }
 
-/* SECTIONS */
-
 .admin-order-modal-section {
   padding: 22px 0;
 
@@ -2858,8 +2680,6 @@
 .admin-order-section-title h3 {
   margin: 0;
 }
-
-/* ITEMS */
 
 .admin-order-modal-items {
   display: flex;
@@ -2905,8 +2725,6 @@
   text-align: right;
 }
 
-/* ADDRESS */
-
 .admin-delivery-address {
   padding: 16px;
 
@@ -2932,8 +2750,6 @@
   font-size: 12px;
   line-height: 1.5;
 }
-
-/* TOTAL */
 
 .admin-order-modal-total {
   display: flex;
@@ -2991,8 +2807,6 @@
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
 }
 
-/* HEADER */
-
 .admin-order-modal-header {
   display: flex;
   justify-content: space-between;
@@ -3030,8 +2844,6 @@
   cursor: pointer;
 }
 
-/* CUSTOMER INFORMATION */
-
 .admin-order-info-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -3065,8 +2877,6 @@
   font-weight: 500;
 }
 
-/* SECTIONS */
-
 .admin-order-modal-section {
   padding: 22px 0;
 
@@ -3094,8 +2904,6 @@
 .admin-order-section-title h3 {
   margin: 0;
 }
-
-/* ITEMS */
 
 .admin-order-modal-items {
   display: flex;
@@ -3141,8 +2949,6 @@
   text-align: right;
 }
 
-/* ADDRESS */
-
 .admin-delivery-address {
   padding: 16px;
 
@@ -3168,8 +2974,6 @@
   font-size: 12px;
   line-height: 1.5;
 }
-
-/* TOTAL */
 
 .admin-order-modal-total {
   display: flex;
@@ -3254,9 +3058,6 @@
 
   font-size: 11px;
 }
-/* ========================================
-   TABLET
-======================================== */
 
 @media (max-width: 1024px) {
   .admin-orders-table-wrapper {
@@ -3273,10 +3074,6 @@
     width: min(680px, 100%);
   }
 }
-
-/* ========================================
-   MOBILE
-======================================== */
 
 @media (max-width: 768px) {
   .admin-orders-header {
@@ -3301,8 +3098,6 @@
     margin-bottom: 15px;
   }
 
-  /* Keep table readable with horizontal scroll */
-
   .admin-orders-table-wrapper {
     width: 100%;
     overflow-x: auto;
@@ -3311,8 +3106,6 @@
   .admin-orders-table {
     min-width: 850px;
   }
-
-  /* ORDER DETAILS MODAL */
 
   .admin-order-modal-overlay {
     padding: 15px;
@@ -3344,8 +3137,6 @@
     font-size: 23px;
   }
 
-  /* SUCCESS TOAST */
-
   .admin-success-toast {
     top: 120px;
     left: 15px;
@@ -3354,10 +3145,6 @@
     min-width: 0;
   }
 }
-
-/* ========================================
-   SMALL MOBILE
-======================================== */
 
 @media (max-width: 480px) {
   .admin-orders-header h1 {
@@ -3425,9 +3212,6 @@
 }
 
 /* LOGIN PAGE START */
-/* =========================================
-   WELLROOTED - LOGIN PAGE
-========================================= */
 
 .login-page {
   min-height: 100vh;
@@ -3450,10 +3234,6 @@
   color: #f5f1e6;
 }
 
-/* =========================================
-   LOGIN CONTAINER
-========================================= */
-
 .login-container {
   width: 100%;
   max-width: 460px;
@@ -3467,10 +3247,6 @@
 
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.28);
 }
-
-/* =========================================
-   HEADER
-========================================= */
 
 .login-container > p:first-child {
   margin: 0 0 8px;
@@ -3498,10 +3274,6 @@
   text-align: center;
 }
 
-/* =========================================
-   ERROR MESSAGE
-========================================= */
-
 .login-error {
   margin-bottom: 20px;
   padding: 12px 15px;
@@ -3518,10 +3290,6 @@
 
   text-align: center;
 }
-
-/* =========================================
-   FORM
-========================================= */
 
 .login-container form {
   width: 100%;
@@ -3544,10 +3312,6 @@
 
   letter-spacing: 0.4px;
 }
-
-/* =========================================
-   INPUTS
-========================================= */
 
 .form-group input {
   width: 100%;
@@ -3583,8 +3347,6 @@
   background: #0d2919;
 }
 
-/* Prevent browser autofill from changing design */
-
 .form-group input:-webkit-autofill,
 .form-group input:-webkit-autofill:hover,
 .form-group input:-webkit-autofill:focus {
@@ -3594,10 +3356,6 @@
 
   transition: background-color 5000s ease-in-out 0s;
 }
-
-/* =========================================
-   LOGIN BUTTON
-========================================= */
 
 .login-container button {
   width: 100%;
@@ -3645,10 +3403,6 @@
   cursor: not-allowed;
 }
 
-/* =========================================
-   CREATE ACCOUNT
-========================================= */
-
 .login-container > p:last-child {
   margin: 28px 0 0;
 
@@ -3676,10 +3430,6 @@
   text-decoration: underline;
 }
 
-/* =========================================
-   TABLET
-========================================= */
-
 @media (max-width: 768px) {
   .login-page {
     padding: 100px 20px 50px;
@@ -3699,10 +3449,6 @@
     margin-bottom: 30px;
   }
 }
-
-/* =========================================
-   MOBILE
-========================================= */
 
 @media (max-width: 480px) {
   .login-page {
@@ -3757,10 +3503,6 @@
   }
 }
 
-/* =========================================
-   VERY SMALL MOBILE
-========================================= */
-
 @media (max-width: 350px) {
   .login-page {
     padding-left: 12px;
@@ -3775,13 +3517,6 @@
     font-size: 27px;
   }
 }
-/* LOGIN PAGE END */
-
-/* CREATE ACCOUNT PAGE */
-
-/* =========================================
-   WELLROOTED - REGISTER PAGE
-========================================= */
 
 .register-page {
   min-height: 100vh;
@@ -3804,10 +3539,6 @@
   color: #f5f1e6;
 }
 
-/* =========================================
-   REGISTER CONTAINER
-========================================= */
-
 .register-container {
   width: 100%;
   max-width: 480px;
@@ -3821,10 +3552,6 @@
 
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.28);
 }
-
-/* =========================================
-   HEADER
-========================================= */
 
 .register-container > p:first-child {
   margin: 0 0 8px;
@@ -3852,10 +3579,6 @@
   text-align: center;
 }
 
-/* =========================================
-   ERROR MESSAGE
-========================================= */
-
 .register-error {
   margin-bottom: 20px;
   padding: 12px 15px;
@@ -3872,10 +3595,6 @@
 
   text-align: center;
 }
-
-/* =========================================
-   FORM
-========================================= */
 
 .register-container form {
   width: 100%;
@@ -3898,10 +3617,6 @@
 
   letter-spacing: 0.4px;
 }
-
-/* =========================================
-   INPUTS
-========================================= */
 
 .register-container .form-group input {
   width: 100%;
@@ -3933,10 +3648,6 @@
   box-shadow: 0 0 0 3px rgba(143, 175, 101, 0.12);
 }
 
-/* =========================================
-   AUTOFILL FIX
-========================================= */
-
 .register-container .form-group input:-webkit-autofill,
 .register-container .form-group input:-webkit-autofill:hover,
 .register-container .form-group input:-webkit-autofill:focus {
@@ -3946,10 +3657,6 @@
 
   transition: background-color 5000s ease-in-out 0s;
 }
-
-/* =========================================
-   CREATE ACCOUNT BUTTON
-========================================= */
 
 .register-container button {
   width: 100%;
@@ -3996,10 +3703,6 @@
   cursor: not-allowed;
 }
 
-/* =========================================
-   LOGIN LINK
-========================================= */
-
 .register-container > p:last-child {
   margin: 27px 0 0;
 
@@ -4028,10 +3731,6 @@
   text-decoration: underline;
 }
 
-/* =========================================
-   TABLET
-========================================= */
-
 @media (max-width: 768px) {
   .register-page {
     padding: 100px 20px 50px;
@@ -4051,10 +3750,6 @@
     margin-bottom: 28px;
   }
 }
-
-/* =========================================
-   MOBILE
-========================================= */
 
 @media (max-width: 480px) {
   .register-page {
@@ -4109,10 +3804,6 @@
   }
 }
 
-/* =========================================
-   VERY SMALL MOBILE
-========================================= */
-
 @media (max-width: 350px) {
   .register-page {
     padding-left: 12px;
@@ -4127,12 +3818,6 @@
     font-size: 26px;
   }
 }
-
-/* CREATE ACCOUNT END */
-
-/* =========================================
-   OUR STORY
-========================================= */
 
 .our-story-page {
   width: 100%;
@@ -4175,10 +3860,6 @@
   color: #8faf65;
   font-style: italic;
 }
-
-/* =========================================
-   HERO
-========================================= */
 
 .story-hero {
   position: relative;
@@ -4348,10 +4029,6 @@
   background: rgba(143, 175, 101, 0.07);
 }
 
-/* =========================================
-   ORIGIN
-========================================= */
-
 .story-origin-section {
   padding: 130px 0;
 
@@ -4494,10 +4171,6 @@
   letter-spacing: 0.08em;
 }
 
-/* =========================================
-   PHILOSOPHY
-========================================= */
-
 .story-philosophy-section {
   padding: 130px 0;
 
@@ -4591,10 +4264,6 @@
   font-size: 0.93rem;
   line-height: 1.8;
 }
-
-/* =========================================
-   JOURNEY
-========================================= */
 
 .story-journey-section {
   padding: 140px 0;
@@ -4705,10 +4374,6 @@
   line-height: 1.8;
 }
 
-/* =========================================
-   LOCAL / PUNE
-========================================= */
-
 .story-local-section {
   position: relative;
 
@@ -4814,10 +4479,6 @@
   background: rgba(11, 36, 22, 0.16);
 }
 
-/* =========================================
-   CTA
-========================================= */
-
 .story-cta-section {
   display: flex;
   flex-direction: column;
@@ -4899,10 +4560,6 @@
   color: #f5f1e6;
 }
 
-/* =========================================
-   TABLET
-========================================= */
-
 @media (max-width: 1024px) {
   .story-hero {
     min-height: 80vh;
@@ -4927,16 +4584,10 @@
   }
 }
 
-/* =========================================
-   MOBILE
-========================================= */
-
 @media (max-width: 768px) {
   .story-container {
     width: 88%;
   }
-
-  /* HERO */
 
   .story-hero {
     min-height: 78vh;
@@ -4969,8 +4620,6 @@
     display: none;
   }
 
-  /* ORIGIN */
-
   .story-origin-section {
     padding: 85px 0;
   }
@@ -4998,8 +4647,6 @@
   .story-origin-content h2 {
     font-size: 2.8rem;
   }
-
-  /* PHILOSOPHY */
 
   .story-philosophy-section {
     padding: 90px 0;
@@ -5030,8 +4677,6 @@
     border-bottom: none;
   }
 
-  /* JOURNEY */
-
   .story-journey-section {
     padding: 90px 0;
   }
@@ -5060,8 +4705,6 @@
     font-size: 1.65rem;
   }
 
-  /* LOCAL */
-
   .story-local-section {
     padding: 100px 0;
   }
@@ -5089,8 +4732,6 @@
     height: 1px;
   }
 
-  /* CTA */
-
   .story-cta-section {
     padding: 100px 7%;
   }
@@ -5099,10 +4740,6 @@
     font-size: 3rem;
   }
 }
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
 
 @media (max-width: 480px) {
   .story-hero {
@@ -5152,10 +4789,6 @@
   }
 }
 
-/* =========================================
-   SEED TO PLATE
-========================================= */
-
 .seed-page {
   width: 100%;
   overflow: hidden;
@@ -5179,10 +4812,6 @@
   font-weight: 700;
   letter-spacing: 0.24em;
 }
-
-/* =========================================
-   HERO
-========================================= */
 
 .seed-page-hero {
   position: relative;
@@ -5329,10 +4958,6 @@
   background: linear-gradient(to bottom, #8faf65, transparent);
 }
 
-/* =========================================
-   INTRO
-========================================= */
-
 .seed-intro {
   padding: 125px 0;
 
@@ -5377,10 +5002,6 @@
 
   line-height: 1.9;
 }
-
-/* =========================================
-   PROCESS
-========================================= */
 
 .seed-process {
   position: relative;
@@ -5515,8 +5136,6 @@
   background: #8faf65;
 }
 
-/* CENTER */
-
 .seed-stage-center {
   position: relative;
   z-index: 4;
@@ -5538,8 +5157,6 @@
     0 0 0 1px #8faf65,
     0 0 25px rgba(143, 175, 101, 0.25);
 }
-
-/* VISUAL */
 
 .seed-stage-visual {
   position: relative;
@@ -5605,10 +5222,6 @@
   font-family: Georgia, serif;
   font-size: 10rem;
 }
-
-/* =========================================
-   PROMISE
-========================================= */
 
 .seed-promise {
   padding: 130px 0;
@@ -5680,10 +5293,6 @@
   font-size: 0.92rem;
   line-height: 1.8;
 }
-
-/* =========================================
-   FINAL CTA
-========================================= */
 
 .seed-final {
   display: flex;
@@ -5775,10 +5384,6 @@
   color: #f5f1e6;
 }
 
-/* =========================================
-   TABLET
-========================================= */
-
 @media (max-width: 1024px) {
   .seed-page-hero {
     min-height: 82vh;
@@ -5812,16 +5417,10 @@
   }
 }
 
-/* =========================================
-   MOBILE
-========================================= */
-
 @media (max-width: 768px) {
   .seed-container {
     width: 88%;
   }
-
-  /* HERO */
 
   .seed-page-hero {
     min-height: 78vh;
@@ -5865,8 +5464,6 @@
     display: none;
   }
 
-  /* INTRO */
-
   .seed-intro {
     padding: 85px 0;
   }
@@ -5880,8 +5477,6 @@
   .seed-intro h2 {
     font-size: 2.7rem;
   }
-
-  /* PROCESS */
 
   .seed-process {
     padding: 90px 0 50px;
@@ -5950,8 +5545,6 @@
     font-size: 2.5rem;
   }
 
-  /* PROMISE */
-
   .seed-promise {
     padding: 90px 0;
   }
@@ -5981,8 +5574,6 @@
     border-bottom: none;
   }
 
-  /* FINAL */
-
   .seed-final {
     padding: 100px 7%;
   }
@@ -5991,10 +5582,6 @@
     font-size: 3rem;
   }
 }
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
 
 @media (max-width: 480px) {
   .seed-page-hero {
@@ -6046,10 +5633,6 @@
   }
 }
 
-/* =========================================
-   LEARN PAGE
-========================================= */
-
 .learn-page {
   width: 100%;
   overflow: hidden;
@@ -6071,10 +5654,6 @@
   font-weight: 700;
   letter-spacing: 0.23em;
 }
-
-/* =========================================
-   HERO
-========================================= */
 
 .learn-hero {
   position: relative;
@@ -6180,10 +5759,6 @@
   border-color: rgba(245, 241, 230, 0.04);
 }
 
-/* =========================================
-   INTRO
-========================================= */
-
 .learn-intro {
   padding: 115px 0;
 
@@ -6222,10 +5797,6 @@
 
   line-height: 1.85;
 }
-
-/* =========================================
-   LIBRARY
-========================================= */
 
 .learn-library {
   padding: 120px 0 140px;
@@ -6285,10 +5856,6 @@
   color: #071b10;
 }
 
-/* =========================================
-   CARDS
-========================================= */
-
 .learn-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -6322,36 +5889,56 @@
 
 .learn-card-visual {
   position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: #0d291a;
+}
 
-  height: 210px;
+.learn-card-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.learn-card:hover .learn-card-image {
+  transform: scale(1.07);
+}
+
+.learn-card-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7, 27, 16, 0.4), transparent 50%);
+  pointer-events: none;
+}
+
+.learn-card-number {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: auto;
+  z-index: 2;
+
+  width: 38px;
+  height: 38px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
 
-  border-bottom: 1px solid rgba(143, 175, 101, 0.13);
+  background: rgba(7, 27, 16, 0.65);
+  backdrop-filter: blur(8px);
 
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(143, 175, 101, 0.13),
-      transparent 58%
-    ),
-    #0d291a;
-}
-
-.learn-card-number {
-  position: absolute;
-
-  right: 20px;
-  bottom: -20px;
-
-  color: rgba(245, 241, 230, 0.035);
-
-  font-family: Georgia, serif;
-  font-size: 7rem;
+  color: #f5f1e6;
+  font-size: 13px;
+  font-family: inherit;
 }
 
 .learn-card-icon {
@@ -6440,10 +6027,6 @@
   transform: translateX(5px);
 }
 
-/* =========================================
-   MODAL
-========================================= */
-
 .learn-modal-overlay {
   position: fixed;
   z-index: 3000;
@@ -6503,13 +6086,24 @@
 
 .learn-modal-top {
   position: relative;
-
-  height: 130px;
-
-  display: flex;
-  align-items: center;
-
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 14px;
   margin-bottom: 28px;
+}
+
+.learn-modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.learn-modal-close {
+  z-index: 10;
+  background: rgba(7, 27, 16, 0.85);
 }
 
 .learn-modal-number {
@@ -6619,10 +6213,6 @@
   font-size: 0.7rem;
 }
 
-/* =========================================
-   TABLET
-========================================= */
-
 @media (max-width: 1024px) {
   .learn-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -6641,10 +6231,6 @@
     justify-content: flex-start;
   }
 }
-
-/* =========================================
-   MOBILE
-========================================= */
 
 @media (max-width: 768px) {
   .learn-container {
@@ -6710,10 +6296,6 @@
   }
 }
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
 @media (max-width: 480px) {
   .learn-hero {
     min-height: 70vh;
@@ -6731,7 +6313,11 @@
   }
 
   .learn-card-visual {
-    height: 180px;
+    height: 250px;
+  }
+
+  .learn-modal-top {
+    height: 210px;
   }
 
   .learn-filters {
@@ -6754,10 +6340,6 @@
     border-radius: 18px;
   }
 
-  .learn-modal-top {
-    height: 105px;
-  }
-
   .learn-modal-icon {
     width: 90px;
     height: 90px;
@@ -6767,10 +6349,6 @@
     font-size: 2.35rem;
   }
 }
-
-/* =========================================
-   WELLROOTED — CHECKOUT PAGE
-========================================= */
 
 .checkout-page {
   min-height: 100vh;
@@ -6786,8 +6364,6 @@
 .checkout-page *::after {
   box-sizing: border-box;
 }
-
-/* HEADER */
 
 .checkout-header {
   text-align: center;
@@ -6816,8 +6392,6 @@
   color: #a5bf7c;
 }
 
-/* MAIN LAYOUT */
-
 .checkout-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.85fr);
@@ -6826,8 +6400,6 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-
-/* DELIVERY FORM */
 
 .checkout-form {
   background: #0b281b;
@@ -6856,8 +6428,6 @@
   font-weight: 500;
   letter-spacing: 0.3px;
 }
-
-/* INPUTS */
 
 .checkout-form input,
 .checkout-form textarea {
@@ -6901,8 +6471,6 @@
   transition: background-color 9999s ease-out;
 }
 
-/* CITY + PINCODE */
-
 .checkout-form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -6912,8 +6480,6 @@
 .checkout-form-row label {
   min-width: 0;
 }
-
-/* ERROR */
 
 .checkout-error {
   padding: 13px 15px;
@@ -6925,8 +6491,6 @@
   font-size: 13px;
   line-height: 1.5;
 }
-
-/* PLACE ORDER BUTTON */
 
 .place-order-btn {
   width: 100%;
@@ -6963,8 +6527,6 @@
   cursor: not-allowed;
 }
 
-/* ORDER SUMMARY */
-
 .checkout-summary {
   background: #0b281b;
   border: 1px solid rgba(172, 194, 145, 0.15);
@@ -6981,8 +6543,6 @@
   margin-bottom: 5px;
   border-bottom: 1px solid rgba(175, 199, 157, 0.16);
 }
-
-/* PRODUCT ROW */
 
 .checkout-item {
   display: flex;
@@ -7018,8 +6578,6 @@
   white-space: nowrap;
 }
 
-/* TOTAL */
-
 .checkout-total {
   display: flex;
   align-items: center;
@@ -7040,10 +6598,6 @@
   color: #f7f4e9;
 }
 
-/* =========================================
-   TABLET
-========================================= */
-
 @media (max-width: 900px) {
   .checkout-page {
     padding-top: 125px;
@@ -7063,10 +6617,6 @@
     margin-bottom: 38px;
   }
 }
-
-/* =========================================
-   MOBILE
-========================================= */
 
 @media (max-width: 600px) {
   .checkout-page {
@@ -7137,8 +6687,6 @@
     min-height: 52px;
   }
 }
-
-/* SMALL PHONES */
 
 @media (max-width: 360px) {
   .checkout-page {

@@ -16,8 +16,6 @@ function AdminLayout() {
 
   return (
     <div className="admin-layout">
-      {/* SIDEBAR */}
-
       <aside className="admin-sidebar">
         <div className="admin-brand">
           <span>ADMIN PANEL</span>
@@ -68,8 +66,6 @@ function AdminLayout() {
           </button>
         </div>
       </aside>
-
-      {/* PAGE CONTENT */}
 
       <main className="admin-main">
         <Outlet />

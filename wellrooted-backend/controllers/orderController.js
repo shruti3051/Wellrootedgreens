@@ -6,19 +6,16 @@ const createOrder = async (req, res, next) => {
   try {
     const { fullName, phone, addressLine, city, pincode } = req.body;
 
-    // 1. Validate delivery details
     if (!fullName || !phone || !addressLine || !city || !pincode) {
       return res.status(400).json({
         message: "All delivery details are required",
       });
     }
 
-    // 2. Find logged-in user's cart
     const cart = await Cart.findOne({
       user: req.user._id,
     }).populate("items.product");
 
-    // 3. Cart must contain products
     if (!cart || cart.items.length === 0) {
       return res.status(400).json({
         message: "Cart is empty",
@@ -41,7 +38,6 @@ const createOrder = async (req, res, next) => {
       }
     }
 
-    // 4. Build order snapshot
     const orderItems = cart.items.map((item) => ({
       product: item.product._id,
       name: item.product.name,
@@ -50,13 +46,11 @@ const createOrder = async (req, res, next) => {
       quantity: item.quantity,
     }));
 
-    // 5. Calculate total on backend
     const totalAmount = orderItems.reduce(
       (total, item) => total + item.price * item.quantity,
       0,
     );
 
-    // 6. Create order
     const order = await Order.create({
       user: req.user._id,
 
@@ -81,11 +75,9 @@ const createOrder = async (req, res, next) => {
       });
     }
 
-    // 7. Clear cart ONLY after order creation succeeds
     cart.items = [];
     await cart.save();
 
-    // 8. Return created order
     res.status(201).json({
       message: "Order placed successfully",
       order,
@@ -133,14 +125,12 @@ const updateOrderStatus = async (req, res, next) => {
       "cancelled",
     ];
 
-    // 1. Validate requested status
     if (!status || !allowedStatuses.includes(status)) {
       return res.status(400).json({
         message: "Invalid order status",
       });
     }
 
-    // 2. Find order
     const order = await Order.findById(id);
 
     if (!order) {
@@ -151,14 +141,12 @@ const updateOrderStatus = async (req, res, next) => {
 
     const currentStatus = order.status;
 
-    // 3. No need to update to same status
     if (currentStatus === status) {
       return res.status(400).json({
         message: `Order is already ${status}`,
       });
     }
 
-    // 4. Define valid status transitions
     const validTransitions = {
       pending: ["confirmed", "cancelled"],
 
@@ -173,14 +161,12 @@ const updateOrderStatus = async (req, res, next) => {
       cancelled: [],
     };
 
-    // 5. Check whether requested transition is allowed
     if (!validTransitions[currentStatus]?.includes(status)) {
       return res.status(400).json({
         message: `Cannot change order status from ${currentStatus} to ${status}`,
       });
     }
 
-    // 6. If order is being cancelled, restore product stock
     if (status === "cancelled") {
       for (const item of order.items) {
         await Product.findByIdAndUpdate(item.product, {
@@ -191,12 +177,10 @@ const updateOrderStatus = async (req, res, next) => {
       }
     }
 
-    // 7. Update order status
     order.status = status;
 
     await order.save();
 
-    // 8. Return updated order
     res.status(200).json({
       message: "Order status updated successfully",
       order,

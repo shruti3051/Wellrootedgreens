@@ -1,7 +1,5 @@
-/* Navbar */
-/* added later */
 .user-nav {
-  position: relative; /* VERY IMPORTANT */
+  position: relative;
   display: inline-block;
   width: fit-content;
 }
@@ -11,7 +9,7 @@
   font-size: 14px;
 }
 .user-nav {
-  position: relative; /* VERY IMPORTANT */
+  position: relative;
   display: inline-block;
   width: fit-content;
 }
@@ -30,7 +28,6 @@
   white-space: nowrap;
 }
 
-/* Dropdown exactly same width as Hi, Shruti Kamble */
 .user-dropdown {
   position: absolute;
 
@@ -120,7 +117,7 @@
   border-radius: 50%;
   line-height: 1;
 }
-/* end of later keep it */
+
 .navbar {
   display: flex;
   flex-direction: column;
@@ -398,8 +395,6 @@
     visibility: visible;
   }
 
-  /* TOP ROW */
-
   .mobile-menu-header {
     display: flex;
     align-items: center;
@@ -429,8 +424,6 @@
     padding: 5px;
   }
 
-  /* MENU LINKS */
-
   .mobile-menu-links {
     display: flex;
     flex-direction: column;
@@ -457,8 +450,6 @@
   .mobile-menu-links a:hover {
     color: #c9b875;
   }
-
-  /* LOGIN / LOGOUT */
 
   .mobile-menu-bottom {
     margin-top: 30px;
@@ -496,5 +487,3 @@
     color: #0b2416;
   }
 }
-
-/* END NAVBAR */

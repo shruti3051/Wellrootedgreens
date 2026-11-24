@@ -18,18 +18,11 @@ function Footer() {
 
   return (
     <footer className="footer">
-      {/* Decorative glow */}
       <div className="footer-glow footer-glow-one"></div>
       <div className="footer-glow footer-glow-two"></div>
 
       <div className="footer-container">
-        {/* =========================
-            MAIN FOOTER
-        ========================== */}
-
         <div className="footer-main">
-          {/* BRAND */}
-
           <div className="footer-brand">
             <Link to="/" className="footer-logo">
               <img
@@ -49,9 +42,6 @@ function Footer() {
               <span>Viman Nagar, Pune</span>
             </div>
           </div>
-
-          {/* EXPLORE */}
-
           <div className="footer-column">
             <h4>EXPLORE</h4>
 
@@ -61,9 +51,6 @@ function Footer() {
             <Link to="/seed-to-plate">Seed to Plate</Link>
             <Link to="/learn">Learn</Link>
           </div>
-
-          {/* SHOP */}
-
           <div className="footer-column">
             <h4>OUR GREENS</h4>
 
@@ -73,8 +60,6 @@ function Footer() {
             <Link to="/shop">Pea Shoots</Link>
             <Link to="/shop">View All</Link>
           </div>
-
-          {/* CONNECT */}
 
           <div className="footer-column footer-connect">
             <h4>LET'S CONNECT</h4>
@@ -87,13 +72,10 @@ function Footer() {
               microgreenswellrooted@gmail.com
             </a>
 
-            {/* Add WhatsApp number later */}
             <a href="#" className="footer-contact-link">
               <FaWhatsapp size={16} />
               WhatsApp Us
             </a>
-
-            {/* SOCIAL */}
 
             <div className="footer-socials">
               <a
@@ -116,10 +98,6 @@ function Footer() {
           </div>
         </div>
 
-        {/* =========================
-            DELIVERY MESSAGE
-        ========================== */}
-
         <div className="footer-delivery">
           <div>
             <Sprout size={18} />
@@ -128,10 +106,6 @@ function Footer() {
 
           <p>Free delivery on orders above ₹499</p>
         </div>
-
-        {/* =========================
-            BOTTOM
-        ========================== */}
 
         <div className="footer-bottom">
           <p>© {currentYear} WellRootedGreens. All rights reserved.</p>

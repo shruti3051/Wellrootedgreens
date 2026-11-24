@@ -164,8 +164,6 @@ function AdminOrders() {
               </button>
             </div>
 
-            {/* CUSTOMER INFO */}
-
             <div className="admin-order-info-grid">
               <div>
                 <span>Customer</span>
@@ -208,8 +206,6 @@ function AdminOrders() {
                 </strong>
               </div>
             </div>
-
-            {/* STATUS */}
 
             <div className="admin-order-modal-section">
               <div className="admin-order-section-title">
@@ -268,8 +264,6 @@ function AdminOrders() {
               </div>
             </div>
 
-            {/* ITEMS */}
-
             <div className="admin-order-modal-section">
               <h3>Items</h3>
 
@@ -299,8 +293,6 @@ function AdminOrders() {
               </div>
             </div>
 
-            {/* DELIVERY ADDRESS */}
-
             <div className="admin-order-modal-section">
               <h3>Delivery Address</h3>
 
@@ -323,8 +315,6 @@ function AdminOrders() {
                 </p>
               </div>
             </div>
-
-            {/* TOTAL */}
 
             <div className="admin-order-modal-total">
               <span>Order Total</span>

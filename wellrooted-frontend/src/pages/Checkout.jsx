@@ -102,8 +102,6 @@ function Checkout() {
       </div>
 
       <div className="checkout-layout">
-        {/* DELIVERY FORM */}
-
         <form className="checkout-form" onSubmit={handleSubmit}>
           <h2>Delivery Details</h2>
 
@@ -173,8 +171,6 @@ function Checkout() {
             {placingOrder ? "Placing Order..." : "Place Order"}
           </button>
         </form>
-
-        {/* ORDER SUMMARY */}
 
         <div className="checkout-summary">
           <h2>Order Summary</h2>

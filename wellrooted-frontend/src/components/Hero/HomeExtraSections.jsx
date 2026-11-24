@@ -14,8 +14,6 @@ import {
 } from "lucide-react";
 
 import "./HomeExtraSections.css";
-
-// Replace these with your actual images
 import storyMain from "../../assets/images/story-main.png";
 import storyTop from "../../assets/images/story-top.png";
 import storyBottom from "../../assets/images/story-bottom.png";
@@ -74,10 +72,6 @@ const HomeExtraSections = () => {
 
   return (
     <section className="home-extra">
-      {/* =====================================
-          1. TRUST / BENEFITS STRIP
-      ====================================== */}
-
       <div className="trust-strip">
         {trustItems.map((item, index) => {
           const Icon = item.icon;
@@ -96,10 +90,6 @@ const HomeExtraSections = () => {
           );
         })}
       </div>
-
-      {/* =====================================
-          2. OUR STORY
-      ====================================== */}
 
       <section className="home-story">
         <div className="story-content">
@@ -144,15 +134,10 @@ const HomeExtraSections = () => {
           </div>
         </div>
 
-        {/* Decorative plant */}
         <div className="story-leaf">
           <Sprout size={95} strokeWidth={0.7} />
         </div>
       </section>
-
-      {/* =====================================
-          3. GOOD FOR YOU / PLANET
-      ====================================== */}
 
       <section className="planet-section">
         <div className="planet-overlay"></div>

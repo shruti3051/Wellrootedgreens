@@ -10,10 +10,6 @@
   color: #0b2416;
 }
 
-/* =========================================
-   SECTION HEADING
-========================================= */
-
 .journey-heading {
   max-width: 720px;
 
@@ -63,10 +59,6 @@
   color: #687268;
 }
 
-/* =========================================
-   MAIN LAYOUT
-========================================= */
-
 .journey-container {
   display: grid;
 
@@ -79,15 +71,9 @@
   margin: 0 auto;
 }
 
-/* =========================================
-   LEFT SIDE — STAGES
-========================================= */
-
 .journey-stages {
   position: relative;
 }
-
-/* vertical journey line */
 
 .journey-stages::before {
   content: "";
@@ -127,10 +113,6 @@
 
   transform: translateX(12px);
 }
-
-/* =========================================
-   STAGE NUMBER
-========================================= */
 
 .stage-number {
   position: relative;
@@ -179,10 +161,6 @@
   box-shadow: 0 0 0 8px rgba(113, 143, 78, 0.12);
 }
 
-/* =========================================
-   STAGE TEXT
-========================================= */
-
 .stage-text {
   max-width: 360px;
 }
@@ -213,10 +191,6 @@
   line-height: 1.7;
 }
 
-/* =========================================
-   RIGHT SIDE — STICKY VISUAL
-========================================= */
-
 .journey-visual {
   position: sticky;
 
@@ -238,10 +212,6 @@
   object-fit: contain;
   display: block;
 }
-
-/* =========================================
-   IMAGE CONTAINER
-========================================= */
 
 .journey-image-container {
   position: relative;
@@ -266,10 +236,6 @@
 
   pointer-events: none;
 }
-
-/* =========================================
-   REAL JOURNEY IMAGES
-========================================= */
 
 .journey-image {
   position: absolute;
@@ -300,10 +266,6 @@
 
   filter: blur(0);
 }
-
-/* =========================================
-   IMAGE LABEL
-========================================= */
 
 .image-label {
   position: absolute;
@@ -353,10 +315,6 @@
   display: none;
 }
 
-/* =========================================
-   TABLET
-========================================= */
-
 @media (max-width: 1024px) {
   .seed-journey {
     padding: 90px 4%;
@@ -400,21 +358,10 @@
   }
 }
 
-/* =========================================
-   MOBILE
-========================================= */
-/* =========================================
-   MOBILE — VERTICAL JOURNEY
-========================================= */
-
 @media (max-width: 768px) {
   .seed-journey {
     padding: 70px 20px;
   }
-
-  /* ==============================
-     HEADING
-  ============================== */
 
   .journey-heading {
     margin-bottom: 55px;
@@ -430,10 +377,6 @@
     font-size: 15px;
   }
 
-  /* ==============================
-     REMOVE DESKTOP VISUAL
-  ============================== */
-
   .journey-container {
     display: block;
   }
@@ -441,10 +384,6 @@
   .journey-visual {
     display: none;
   }
-
-  /* ==============================
-     TIMELINE
-  ============================== */
 
   .journey-stages {
     position: relative;
@@ -465,10 +404,6 @@
 
     z-index: 0;
   }
-
-  /* ==============================
-     EACH STAGE
-  ============================== */
 
   .journey-stage {
     position: relative;
@@ -500,10 +435,6 @@
   .journey-stage:last-child {
     padding-bottom: 0;
   }
-
-  /* ==============================
-     NUMBER
-  ============================== */
 
   .stage-number {
     position: relative;
@@ -545,19 +476,11 @@
     box-shadow: 0 0 0 7px rgba(113, 143, 78, 0.12);
   }
 
-  /* ==============================
-     RIGHT CONTENT COLUMN
-  ============================== */
-
   .stage-content {
     width: 100%;
 
     min-width: 0;
   }
-
-  /* ==============================
-     TEXT
-  ============================== */
 
   .stage-text {
     width: 100%;
@@ -590,10 +513,6 @@
 
     line-height: 1.6;
   }
-
-  /* ==============================
-     IMAGE
-  ============================== */
 
   .mobile-stage-image {
     display: flex;

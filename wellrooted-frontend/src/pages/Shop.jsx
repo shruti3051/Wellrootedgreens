@@ -74,8 +74,6 @@ function Shop() {
         Explore our complete collection of freshly grown microgreens.
       </p>
 
-      {/* PRODUCT GRID */}
-
       <div className="shop-grid">
         {products.map((product) => {
           const productCartItem = getCartItem(product._id);
@@ -98,7 +96,6 @@ function Shop() {
                 <h2>{product.name}</h2>
 
                 <p>{product.shortDescription}</p>
-                {/* STOCK MESSAGE */}
 
                 {product.stock > 0 && product.stock <= 5 && (
                   <p className="low-stock">Only {product.stock} left</p>
@@ -176,16 +173,12 @@ function Shop() {
         })}
       </div>
 
-      {/* PRODUCT DETAIL MODAL */}
-
       {selectedProduct && (
         <div
           className="product-modal-overlay"
           onClick={() => setSelectedProduct(null)}
         >
           <div className="product-modal" onClick={(e) => e.stopPropagation()}>
-            {/* CLOSE */}
-
             <button
               className="modal-close"
               type="button"
@@ -194,7 +187,6 @@ function Shop() {
               ✕
             </button>
 
-            {/* LARGE PRODUCT IMAGE */}
             <div className="modal-image">
               {selectedProduct.image ? (
                 <img src={selectedProduct.image} alt={selectedProduct.name} />
@@ -202,8 +194,6 @@ function Shop() {
                 <div className="modal-image-placeholder">🌱</div>
               )}
             </div>
-
-            {/* PRODUCT DETAILS */}
 
             <div className="modal-content">
               <p className="modal-label">FRESHLY GROWN</p>
@@ -215,8 +205,6 @@ function Shop() {
               </p>
 
               <p className="modal-description">{selectedProduct.description}</p>
-
-              {/* MODAL STOCK MESSAGE */}
 
               {selectedProduct.stock > 0 && selectedProduct.stock <= 5 && (
                 <p className="low-stock">Only {selectedProduct.stock} left</p>
@@ -232,10 +220,6 @@ function Shop() {
 
                   <span>/ {selectedProduct.weight}</span>
                 </div>
-
-                {/* ==========================
-                    OUT OF STOCK
-                ========================== */}
 
                 {selectedProduct.stock === 0 ? (
                   <button type="button" className="out-of-stock-btn" disabled>

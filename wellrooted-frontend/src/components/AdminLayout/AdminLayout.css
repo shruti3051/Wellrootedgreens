@@ -9,7 +9,7 @@
   color: #f5f1e6;
 }
 
-/* SIDEBAR */
+/* Sidebar */
 
 .admin-sidebar {
   position: sticky;
@@ -159,11 +159,9 @@
     #071b11;
 }
 
-/* ========================================
-   ADMIN RESPONSIVE
-======================================== */
+/* ADMIN RESPONSIVE */
 
-/* TABLET */
+/* tablet*/
 
 @media (max-width: 1024px) {
   .admin-main {
@@ -181,15 +179,10 @@
 @media (max-width: 768px) {
   .admin-layout {
     flex-direction: column;
-
-    /* Adjust this only if your mobile navbar
-       has a different actual height */
     margin-top: 110px;
 
     min-height: calc(100vh - 110px);
   }
-
-  /* SIDEBAR BECOMES TOP ADMIN BAR */
 
   .admin-sidebar {
     position: static;
@@ -210,8 +203,6 @@
     margin-bottom: 18px;
   }
 
-  /* HORIZONTAL NAV */
-
   .admin-navigation {
     flex-direction: row;
 
@@ -230,13 +221,9 @@
     font-size: 13px;
   }
 
-  /* HIDE DESKTOP SIDEBAR FOOTER */
-
   .admin-sidebar-bottom {
     display: none;
   }
-
-  /* CONTENT */
 
   .admin-main {
     width: 100%;
@@ -248,8 +235,6 @@
     padding: 30px 20px;
   }
 }
-
-/* SMALL MOBILE */
 
 @media (max-width: 480px) {
   .admin-layout {

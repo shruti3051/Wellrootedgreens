@@ -1,5 +1,17 @@
 import React, { useState } from "react";
 import { ArrowRight, X, Leaf, Utensils, Sparkles, Sprout } from "lucide-react";
+import broccoli from "../assets/images/microgreens/brocoli.png";
+import sunflower from "../assets/images/microgreens/sunflower_1200x1200.jpg";
+import peaShoots from "../assets/images/microgreens/peashotpng.png";
+import pinkRadish from "../assets/images/microgreens/redRadish.jpg";
+import purpleRadish from "../assets/images/microgreens/WhatsApp Image 2026-08-21 at 8.44.37 PM.jpeg";
+import mustard from "../assets/images/microgreens/mustard.jpg";
+import redAmaranth from "../assets/images/microgreens/amaranth.jpeg";
+import beetroot from "../assets/images/microgreens/beet.jpg";
+import kale from "../assets/images/microgreens/brocoli.png";
+import fenugreek from "../assets/images/microgreens/fenugreek.jfif";
+import basil from "../assets/images/microgreens/basil-microgreen.webp";
+import coriander from "../assets/images/microgreens/cilantro-microgreens.jpg";
 
 const microgreens = [
   {
@@ -139,6 +151,20 @@ const microgreens = [
     accent: "12",
   },
 ];
+const microgreenImages = {
+  Broccoli: broccoli,
+  Sunflower: sunflower,
+  "Pea Shoots": peaShoots,
+  "Pink Radish": pinkRadish,
+  "Purple Radish": purpleRadish,
+  Mustard: mustard,
+  "Red Amaranth": redAmaranth,
+  Beetroot: beetroot,
+  Kale: kale,
+  Fenugreek: fenugreek,
+  Basil: basil,
+  Coriander: coriander,
+};
 
 const filters = ["all", "mild", "peppery", "earthy", "aromatic"];
 
@@ -153,8 +179,6 @@ function Learn() {
 
   return (
     <main className="learn-page">
-      {/* HERO */}
-
       <section className="learn-hero">
         <div className="learn-hero-circle learn-circle-one"></div>
         <div className="learn-hero-circle learn-circle-two"></div>
@@ -177,8 +201,6 @@ function Learn() {
           </div>
         </div>
       </section>
-
-      {/* INTRO */}
 
       <section className="learn-intro">
         <div className="learn-container learn-intro-grid">
@@ -204,8 +226,6 @@ function Learn() {
           </div>
         </div>
       </section>
-
-      {/* LIBRARY */}
 
       <section className="learn-library">
         <div className="learn-container">
@@ -242,11 +262,14 @@ function Learn() {
                 onClick={() => setSelectedGreen(green)}
               >
                 <div className="learn-card-visual">
-                  <span className="learn-card-number">{green.accent}</span>
+                  <img
+                    src={microgreenImages[green.name]}
+                    alt={`${green.name} microgreens`}
+                    className="learn-card-image"
+                    loading="lazy"
+                  />
 
-                  <div className="learn-card-icon">
-                    <Leaf size={43} strokeWidth={1.15} />
-                  </div>
+                  <span className="learn-card-number">{green.accent}</span>
                 </div>
 
                 <div className="learn-card-content">
@@ -276,8 +299,6 @@ function Learn() {
         </div>
       </section>
 
-      {/* MODAL */}
-
       {selectedGreen && (
         <div
           className="learn-modal-overlay"
@@ -287,21 +308,28 @@ function Learn() {
             className="learn-modal"
             onClick={(event) => event.stopPropagation()}
           >
+            {/* CLOSE BUTTON */}
+
             <button
               type="button"
               className="learn-modal-close"
               onClick={() => setSelectedGreen(null)}
+              aria-label="Close details"
             >
               <X size={21} />
             </button>
 
-            <div className="learn-modal-top">
-              <div className="learn-modal-number">{selectedGreen.accent}</div>
+            {/* MICROGREEN IMAGE */}
 
-              <div className="learn-modal-icon">
-                <Leaf size={55} strokeWidth={1.1} />
-              </div>
+            <div className="learn-modal-top">
+              <img
+                src={microgreenImages[selectedGreen.name]}
+                alt={`${selectedGreen.name} microgreens`}
+                className="learn-modal-image"
+              />
             </div>
+
+            {/* NAME AND FLAVOUR */}
 
             <p className="learn-section-label">KNOW YOUR GREENS</p>
 
@@ -309,10 +337,11 @@ function Learn() {
 
             <p className="learn-modal-flavour">{selectedGreen.flavour}</p>
 
+            {/* SPECIALITY */}
+
             <div className="learn-modal-section">
               <div className="learn-modal-section-title">
                 <Sparkles size={19} />
-
                 <h3>What makes it special?</h3>
               </div>
 
@@ -320,10 +349,11 @@ function Learn() {
             </div>
 
             <div className="learn-modal-info-grid">
+              {/* NUTRITION HIGHLIGHTS */}
+
               <div className="learn-modal-info">
                 <div className="learn-modal-section-title">
                   <Leaf size={18} />
-
                   <h3>Nutrition highlights</h3>
                 </div>
 
@@ -334,10 +364,11 @@ function Learn() {
                 </div>
               </div>
 
+              {/* FOOD RECOMMENDATIONS */}
+
               <div className="learn-modal-info">
                 <div className="learn-modal-section-title">
                   <Utensils size={18} />
-
                   <h3>Try it with</h3>
                 </div>
 
