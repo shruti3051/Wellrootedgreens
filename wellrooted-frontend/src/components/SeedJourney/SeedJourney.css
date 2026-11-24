@@ -1,0 +1,1288 @@
+.seed-journey {
+  position: relative;
+
+  width: 100%;
+
+  padding: 110px 5%;
+
+  background: #f4f0e5;
+
+  color: #0b2416;
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.journey-heading {
+  max-width: 720px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+.journey-eyebrow {
+  margin: 0 0 15px;
+
+  color: #718f4e;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+}
+
+.journey-heading h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(45px, 5vw, 72px);
+
+  line-height: 1.05;
+
+  font-weight: 400;
+
+  color: #0b2416;
+}
+
+.journey-heading h2 span {
+  color: #718f4e;
+}
+
+.journey-description {
+  max-width: 580px;
+
+  margin: 22px auto 0;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  color: #687268;
+}
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.journey-container {
+  display: grid;
+
+  grid-template-columns: 40% 60%;
+
+  gap: 60px;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+/* =========================================
+   LEFT SIDE — STAGES
+========================================= */
+
+.journey-stages {
+  position: relative;
+}
+
+/* vertical journey line */
+
+.journey-stages::before {
+  content: "";
+
+  position: absolute;
+
+  left: 30px;
+
+  top: 35vh;
+  bottom: 35vh;
+
+  width: 1px;
+
+  background: rgba(11, 36, 22, 0.18);
+}
+
+.journey-stage {
+  position: relative;
+
+  min-height: 70vh;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+
+  opacity: 0.25;
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.journey-stage.active {
+  opacity: 1;
+
+  transform: translateX(12px);
+}
+
+/* =========================================
+   STAGE NUMBER
+========================================= */
+
+.stage-number {
+  position: relative;
+
+  z-index: 2;
+
+  flex-shrink: 0;
+
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid rgba(11, 36, 22, 0.25);
+
+  border-radius: 50%;
+
+  background: #f4f0e5;
+
+  font-family: Georgia, serif;
+
+  font-size: 15px;
+
+  color: #647064;
+
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease,
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.journey-stage.active .stage-number {
+  background: #718f4e;
+
+  border-color: #718f4e;
+
+  color: #ffffff;
+
+  transform: scale(1.08);
+
+  box-shadow: 0 0 0 8px rgba(113, 143, 78, 0.12);
+}
+
+/* =========================================
+   STAGE TEXT
+========================================= */
+
+.stage-text {
+  max-width: 360px;
+}
+
+.stage-text h3 {
+  margin: 0 0 12px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(34px, 3vw, 48px);
+
+  font-weight: 400;
+
+  letter-spacing: 1px;
+
+  color: #0b2416;
+}
+
+.stage-text p {
+  max-width: 320px;
+
+  margin: 0;
+
+  color: #687268;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+/* =========================================
+   RIGHT SIDE — STICKY VISUAL
+========================================= */
+
+.journey-visual {
+  position: sticky;
+
+  top: 140px;
+
+  align-self: start;
+
+  height: calc(100vh - 140px);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.journey-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* =========================================
+   IMAGE CONTAINER
+========================================= */
+
+.journey-image-container {
+  position: relative;
+
+  width: min(100%, 680px);
+
+  height: 72vh;
+
+  max-height: 680px;
+
+  overflow: hidden;
+}
+
+.journey-image-container::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+/* =========================================
+   REAL JOURNEY IMAGES
+========================================= */
+
+.journey-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0;
+
+  transform: scale(1.08);
+
+  filter: blur(3px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.8s ease;
+}
+
+.journey-image.active {
+  opacity: 1;
+
+  transform: scale(1);
+
+  filter: blur(0);
+}
+
+/* =========================================
+   IMAGE LABEL
+========================================= */
+
+.image-label {
+  position: absolute;
+
+  left: 30px;
+  bottom: 28px;
+
+  z-index: 3;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 10px 17px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  border-radius: 50px;
+
+  background: rgba(5, 25, 14, 0.6);
+
+  backdrop-filter: blur(12px);
+
+  color: #ffffff;
+}
+
+.image-label span {
+  color: #a8c982;
+
+  font-family: Georgia, serif;
+
+  font-size: 14px;
+}
+
+.image-label p {
+  margin: 0;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.mobile-stage-image {
+  display: none;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+  .seed-journey {
+    padding: 90px 4%;
+  }
+
+  .journey-container {
+    grid-template-columns: 43% 57%;
+
+    gap: 30px;
+  }
+
+  .journey-stage {
+    min-height: 65vh;
+
+    gap: 20px;
+  }
+
+  .stage-number {
+    width: 52px;
+    height: 52px;
+
+    font-size: 13px;
+  }
+
+  .journey-stages::before {
+    left: 26px;
+  }
+
+  .stage-text h3 {
+    font-size: 34px;
+  }
+
+  .stage-text p {
+    font-size: 14px;
+  }
+
+  .journey-image-container {
+    height: 65vh;
+
+    border-radius: 25px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+/* =========================================
+   MOBILE — VERTICAL JOURNEY
+========================================= */
+
+@media (max-width: 768px) {
+  .seed-journey {
+    padding: 70px 20px;
+  }
+
+  /* ==============================
+     HEADING
+  ============================== */
+
+  .journey-heading {
+    margin-bottom: 55px;
+    text-align: left;
+  }
+
+  .journey-heading h2 {
+    font-size: clamp(40px, 12vw, 56px);
+  }
+
+  .journey-description {
+    margin-left: 0;
+    font-size: 15px;
+  }
+
+  /* ==============================
+     REMOVE DESKTOP VISUAL
+  ============================== */
+
+  .journey-container {
+    display: block;
+  }
+
+  .journey-visual {
+    display: none;
+  }
+
+  /* ==============================
+     TIMELINE
+  ============================== */
+
+  .journey-stages {
+    position: relative;
+  }
+
+  .journey-stages::before {
+    content: "";
+
+    position: absolute;
+
+    left: 24px;
+    top: 24px;
+    bottom: 24px;
+
+    width: 1px;
+
+    background: rgba(11, 36, 22, 0.2);
+
+    z-index: 0;
+  }
+
+  /* ==============================
+     EACH STAGE
+  ============================== */
+
+  .journey-stage {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 48px minmax(0, 1fr);
+
+    column-gap: 20px;
+
+    align-items: start;
+
+    min-height: 0;
+
+    padding: 0 0 80px;
+
+    opacity: 0.35;
+
+    transform: none;
+
+    transition: opacity 0.5s ease;
+  }
+
+  .journey-stage.active {
+    opacity: 1;
+    transform: none;
+  }
+
+  .journey-stage:last-child {
+    padding-bottom: 0;
+  }
+
+  /* ==============================
+     NUMBER
+  ============================== */
+
+  .stage-number {
+    position: relative;
+
+    z-index: 2;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #f4f0e5;
+
+    border: 1px solid rgba(11, 36, 22, 0.25);
+
+    border-radius: 50%;
+
+    font-family: Georgia, serif;
+
+    font-size: 13px;
+
+    color: #647064;
+
+    flex-shrink: 0;
+  }
+
+  .journey-stage.active .stage-number {
+    background: #718f4e;
+
+    border-color: #718f4e;
+
+    color: white;
+
+    transform: scale(1.05);
+
+    box-shadow: 0 0 0 7px rgba(113, 143, 78, 0.12);
+  }
+
+  /* ==============================
+     RIGHT CONTENT COLUMN
+  ============================== */
+
+  .stage-content {
+    width: 100%;
+
+    min-width: 0;
+  }
+
+  /* ==============================
+     TEXT
+  ============================== */
+
+  .stage-text {
+    width: 100%;
+
+    max-width: none;
+
+    padding-top: 3px;
+
+    margin: 0 0 25px;
+  }
+
+  .stage-text h3 {
+    margin: 0 0 8px;
+
+    font-size: clamp(28px, 8vw, 36px);
+
+    line-height: 1.1;
+
+    font-weight: 400;
+  }
+
+  .stage-text p {
+    width: 100%;
+
+    max-width: 290px;
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+
+  /* ==============================
+     IMAGE
+  ============================== */
+
+  .mobile-stage-image {
+    display: flex;
+
+    width: 100%;
+
+    height: 230px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10px;
+
+    overflow: hidden;
+
+    background: transparent;
+  }
+
+  .mobile-stage-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 280px;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    opacity: 0.7;
+
+    transform: scale(0.92);
+
+    transition:
+      opacity 0.5s ease,
+      transform 0.6s ease;
+  }
+
+  .journey-stage.active .mobile-stage-image img {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .seed-journey {
+    padding: 65px 16px;
+  }
+
+  .journey-stage {
+    grid-template-columns: 44px minmax(0, 1fr);
+
+    column-gap: 16px;
+
+    padding-bottom: 65px;
+  }
+
+  .journey-stages::before {
+    left: 22px;
+  }
+
+  .stage-number {
+    width: 44px;
+    height: 44px;
+
+    font-size: 12px;
+  }
+
+  .stage-text h3 {
+    font-size: 27px;
+  }
+
+  .stage-text p {
+    font-size: 13px;
+  }
+
+  .mobile-stage-image {
+    height: 210px;
+
+    margin-top: 8px;
+  }
+
+  .mobile-stage-image img {
+    max-width: 250px;
+  }
+}
+
+/* .seed-journey {
+  position: relative;
+  background: #f4f0e5;
+  color: #0b2416;
+
+  padding: 100px 5%;
+}
+.journey-container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 60px;
+
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.journey-stage {
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.journey-stage > span {
+  font-family: Georgia, serif;
+
+  font-size: 14px;
+  letter-spacing: 3px;
+
+  color: #8faf65;
+
+  margin-bottom: 12px;
+}
+
+.journey-stage h3 {
+  font-family: Georgia, serif;
+
+  font-size: clamp(35px, 4vw, 60px);
+  font-weight: 400;
+
+  margin: 0 0 12px;
+}
+.journey-visual {
+  position: sticky;
+  top: 0;
+
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.plant-scene {
+  position: relative;
+
+  width: 500px;
+  height: 600px;
+
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+.scene-glow {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+
+  left: 50%;
+  top: 45%;
+
+  transform: translate(-50%, -50%) translateZ(-80px);
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(143, 175, 101, 0.18),
+    rgba(143, 175, 101, 0.05) 45%,
+    transparent 70%
+  );
+
+  filter: blur(15px);
+}
+.soil-line {
+  position: absolute;
+
+  width: 80%;
+  height: 4px;
+
+  left: 10%;
+  top: 65%;
+
+  background: #6b4c2f;
+}
+
+.plant {
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+
+  background: #8faf65;
+  border-radius: 50%;
+
+  left: 50%;
+  top: 60%;
+
+  transform: translateX(-50%);
+}
+.seed {
+  position: absolute;
+
+  width: 30px;
+  height: 20px;
+
+  left: 50%;
+  top: 61%;
+
+  background: #8b5e3c;
+
+  border-radius: 70% 30% 70% 30%;
+
+  transform: translateX(-50%) rotate(25deg);
+
+  z-index: 5;
+
+  .seed {
+    box-shadow:
+      inset 5px 3px 7px rgba(255, 255, 255, 0.15),
+      inset -5px -4px 8px rgba(45, 25, 10, 0.35),
+      0 8px 12px rgba(45, 25, 10, 0.25);
+  }
+}
+.stem {
+  position: absolute;
+
+  left: 50%;
+  top: 37%;
+
+  width: 7px;
+  height: 150px;
+
+  background: linear-gradient(to right, #547a3d, #91b86c, #426332);
+
+  border-radius: 10px;
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: bottom;
+  transition: transform 1s ease;
+
+  z-index: 3;
+}
+.leaf {
+  position: absolute;
+
+  width: 90px;
+  height: 55px;
+
+  top: 34%;
+
+  background: linear-gradient(135deg, #9bc879, #4e7c42);
+
+  box-shadow: 0 10px 20px rgba(30, 70, 35, 0.15);
+  opacity: 0;
+  scale: 0;
+  transition:
+    opacity 0.8s ease,
+    scale 0.8s ease;
+  transform-style: preserve-3d;
+
+  box-shadow:
+    inset 8px 5px 12px rgba(255, 255, 255, 0.12),
+    0 15px 25px rgba(30, 70, 35, 0.18);
+}
+
+.leaf::after {
+  content: "";
+
+  position: absolute;
+
+  left: 10%;
+  top: 50%;
+
+  width: 80%;
+  height: 1px;
+
+  background: rgba(245, 241, 230, 0.35);
+
+  transform: rotate(-10deg);
+}
+
+.leaf-left {
+  left: 32%;
+
+  border-radius: 100% 0 100% 0;
+
+  transform: rotate(20deg);
+}
+.leaf-right {
+  right: 32%;
+
+  border-radius: 0 100% 0 100%;
+
+  transform: rotate(-20deg);
+}
+.roots {
+  position: absolute;
+
+  left: 50%;
+  top: 65%;
+
+  width: 150px;
+  height: 160px;
+
+  transform: translateX(-50%);
+}
+.root {
+  position: absolute;
+
+  width: 3px;
+
+  background: linear-gradient(to bottom, #d6c09b, #a78660);
+
+  border-radius: 50%;
+
+  transform-origin: top;
+  transition: transform 1s ease;
+}
+
+.root-main {
+  left: 50%;
+  transform: scaleY(0);
+
+  height: 130px;
+}
+.root-left {
+  left: 50%;
+  top: 30px;
+
+  height: 90px;
+
+  transform: rotate(35deg) scaleY(0);
+}
+
+.root-right {
+  left: 50%;
+  top: 45px;
+
+  height: 80px;
+
+  transform: rotate(-40deg) scaleY(0);
+}
+.journey-stage {
+  opacity: 0.25;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.journey-stage.active {
+  opacity: 1;
+  transform: translateX(20px);
+}
+.stage-2 .root-main,
+.stage-3 .root-main,
+.stage-4 .root-main {
+  transform: scaleY(1);
+}
+
+.stage-2 .root-left,
+.stage-3 .root-left,
+.stage-4 .root-left {
+  transform: rotate(35deg) scaleY(1);
+}
+
+.stage-2 .root-right,
+.stage-3 .root-right,
+.stage-4 .root-right {
+  transform: rotate(-40deg) scaleY(1);
+}
+.stage-2 .stem {
+  transform: translateX(-50%) scaleY(0.25);
+}
+.stage-3 .stem,
+.stage-4 .stem {
+  transform: translateX(-50%) scaleY(1);
+}
+.stage-3 .leaf,
+.stage-4 .leaf {
+  opacity: 1;
+  scale: 1;
+}
+.microgreen-bed {
+  position: absolute;
+
+  left: 50%;
+  top: 38%;
+
+  width: 350px;
+  height: 180px;
+
+  transform: translateX(-50%);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+.microgreen {
+  position: absolute;
+
+  left: calc(10% + (var(--i) * 10%));
+  bottom: 0;
+
+  width: 40px;
+  height: 140px;
+
+  transform-origin: bottom;
+  transform: scaleY(0);
+}
+.micro-stem {
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 4px;
+  height: 110px;
+
+  transform: translateX(-50%);
+
+  border-radius: 5px;
+
+  background: linear-gradient(to right, #557b43, #9abc79, #466638);
+}
+.micro-leaf {
+  position: absolute;
+
+  top: 5px;
+
+  width: 38px;
+  height: 24px;
+
+  background: linear-gradient(135deg, #9bc879, #47733c);
+}
+
+.micro-leaf-left {
+  right: 50%;
+
+  border-radius: 100% 0 100% 0;
+
+  transform: rotate(15deg);
+}
+
+.micro-leaf-right {
+  left: 50%;
+
+  border-radius: 0 100% 0 100%;
+
+  transform: rotate(-15deg);
+}
+.stage-4 .microgreen-bed {
+  opacity: 1;
+  visibility: visible;
+}
+
+.stage-4 .microgreen {
+  transform: scaleY(1);
+
+  transition: transform 0.7s ease;
+  transition-delay: calc(var(--i) * 0.06s);
+}
+.seed,
+.stem,
+.leaf,
+.roots {
+  transition:
+    opacity 0.6s ease,
+    transform 1s ease;
+}
+.stage-4 .seed,
+.stage-4 .stem,
+.stage-4 > .leaf,
+.stage-4 .roots {
+  opacity: 0;
+}
+.harvest-cutter {
+  position: absolute;
+
+  left: 15%;
+  top: 51%;
+
+  width: 130px;
+  height: 35px;
+
+  opacity: 0;
+
+  transform: translateX(-120px) rotate(-8deg);
+
+  z-index: 10;
+
+  transition:
+    opacity 0.4s ease,
+    transform 1.2s ease;
+}
+
+.cutter-blade {
+  position: absolute;
+
+  left: 0;
+  top: 8px;
+
+  width: 90px;
+  height: 10px;
+
+  background: linear-gradient(to bottom, #eeeeea, #a5aaa5);
+
+  border-radius: 10px 0 0 10px;
+}
+
+.cutter-handle {
+  position: absolute;
+
+  right: 0;
+  top: 3px;
+
+  width: 45px;
+  height: 20px;
+
+  background: #6b4932;
+
+  border-radius: 5px 15px 15px 5px;
+}
+.stage-4 .harvest-cutter {
+  opacity: 1;
+
+  transform: translateX(250px) rotate(-8deg);
+}
+.product-pack {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 280px;
+  height: 180px;
+
+  transform: translate(-50%, -40%) scale(0.7) rotateX(15deg);
+
+  opacity: 0;
+  visibility: hidden;
+
+  border-radius: 20px;
+
+  background: rgba(245, 241, 230, 0.95);
+
+  border: 1px solid rgba(11, 36, 22, 0.15);
+
+  box-shadow: 0 30px 60px rgba(11, 36, 22, 0.25);
+
+  overflow: hidden;
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+.pack-window {
+  height: 105px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  background: rgba(143, 175, 101, 0.18);
+
+  font-size: 30px;
+}
+.pack-label {
+  height: 75px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #0b2416;
+  color: #f5f1e6;
+}
+
+.pack-label strong {
+  font-family: Georgia, serif;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+.pack-label small {
+  margin-top: 5px;
+
+  color: #c9b875;
+
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+.stage-5 .product-pack {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translate(-50%, -50%) scale(1) rotateX(0deg);
+}
+.stage-5 .microgreen-bed,
+.stage-5 .harvest-cutter,
+.stage-5 .seed,
+.stage-5 .stem,
+.stage-5 > .leaf,
+.stage-5 .roots {
+  opacity: 0;
+}
+.plate-scene {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 400px;
+
+  transform: translate(-50%, -40%) scale(0.75);
+
+  opacity: 0;
+  visibility: hidden;
+
+  text-align: center;
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+.plate {
+  width: 300px;
+  height: 300px;
+
+  margin: auto;
+
+  border-radius: 50%;
+
+  background: #eee9dc;
+
+  padding: 25px;
+
+  box-shadow:
+    0 30px 50px rgba(11, 36, 22, 0.2),
+    inset 0 0 0 2px rgba(11, 36, 22, 0.05);
+
+  transform: rotateX(55deg) rotateZ(-8deg);
+
+  transition: transform 1s ease;
+}
+.plate-inner {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #f8f5ec;
+
+  box-shadow: inset 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.plate-greens {
+  display: flex;
+  gap: 5px;
+
+  font-size: 38px;
+}
+.plate-message {
+  margin-top: 25px;
+
+  font-family: Georgia, serif;
+  font-size: 18px;
+
+  color: #0b2416;
+}
+.stage-6 .plate-scene {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translate(-50%, -50%) scale(1);
+}
+.stage-6 .plate {
+  transform: rotateX(45deg) rotateZ(0deg);
+}
+.stage-6 .product-pack {
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translate(-50%, -60%) scale(0.8);
+} */
+/* =========================================
+   SEED JOURNEY SECTION
+========================================= */

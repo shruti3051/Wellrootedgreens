@@ -1,0 +1,280 @@
+.admin-layout {
+  min-height: calc(100vh - 140px);
+
+  display: flex;
+
+  margin-top: 140px;
+
+  background: #071b11;
+  color: #f5f1e6;
+}
+
+/* SIDEBAR */
+
+.admin-sidebar {
+  position: sticky;
+  top: 140px;
+
+  width: 250px;
+  height: calc(100vh - 140px);
+
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 35px 25px;
+
+  background: #0b2416;
+
+  border-right: 1px solid rgba(245, 241, 230, 0.08);
+
+  overflow-y: auto;
+}
+
+.admin-brand {
+  margin-bottom: 55px;
+}
+
+.admin-brand p {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  letter-spacing: 2px;
+}
+
+.admin-brand span {
+  display: block;
+  margin-top: 6px;
+
+  color: #8faf65;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+}
+
+/* NAVIGATION */
+
+.admin-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-nav-link {
+  padding: 13px 15px;
+
+  border-radius: 8px;
+
+  color: rgba(245, 241, 230, 0.6);
+
+  font-size: 14px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.admin-nav-link:hover {
+  background: rgba(143, 175, 101, 0.08);
+  color: #f5f1e6;
+}
+
+.admin-nav-link.active {
+  background: rgba(143, 175, 101, 0.13);
+  color: #8faf65;
+}
+
+/* BOTTOM */
+
+.admin-sidebar-bottom {
+  margin-top: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-user {
+  margin-bottom: 10px;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid rgba(245, 241, 230, 0.08);
+}
+
+.admin-user span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: rgba(245, 241, 230, 0.45);
+
+  font-size: 11px;
+}
+
+.admin-user strong {
+  font-size: 14px;
+}
+
+.admin-sidebar-bottom button {
+  width: 100%;
+
+  padding: 11px;
+
+  border: 1px solid rgba(245, 241, 230, 0.12);
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #f5f1e6;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.admin-sidebar-bottom button:hover {
+  background: rgba(245, 241, 230, 0.06);
+}
+
+/* MAIN */
+.admin-main {
+  flex: 1;
+  min-width: 0;
+  min-height: calc(100vh - 140px);
+
+  padding: 45px;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(143, 175, 101, 0.06),
+      transparent 35%
+    ),
+    #071b11;
+}
+
+/* ========================================
+   ADMIN RESPONSIVE
+======================================== */
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .admin-main {
+    padding: 35px 25px;
+  }
+
+  .admin-sidebar {
+    width: 220px;
+    padding: 30px 20px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .admin-layout {
+    flex-direction: column;
+
+    /* Adjust this only if your mobile navbar
+       has a different actual height */
+    margin-top: 110px;
+
+    min-height: calc(100vh - 110px);
+  }
+
+  /* SIDEBAR BECOMES TOP ADMIN BAR */
+
+  .admin-sidebar {
+    position: static;
+
+    width: 100%;
+    height: auto;
+
+    padding: 20px;
+
+    border-right: none;
+
+    border-bottom: 1px solid rgba(245, 241, 230, 0.08);
+
+    overflow: visible;
+  }
+
+  .admin-brand {
+    margin-bottom: 18px;
+  }
+
+  /* HORIZONTAL NAV */
+
+  .admin-navigation {
+    flex-direction: row;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    padding-bottom: 3px;
+  }
+
+  .admin-nav-link {
+    flex-shrink: 0;
+
+    padding: 10px 16px;
+
+    font-size: 13px;
+  }
+
+  /* HIDE DESKTOP SIDEBAR FOOTER */
+
+  .admin-sidebar-bottom {
+    display: none;
+  }
+
+  /* CONTENT */
+
+  .admin-main {
+    width: 100%;
+
+    min-height: auto;
+
+    margin-left: 0;
+
+    padding: 30px 20px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+  .admin-layout {
+    margin-top: 100px;
+  }
+
+  .admin-sidebar {
+    padding: 17px 15px;
+  }
+
+  .admin-brand span {
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .admin-navigation {
+    gap: 5px;
+  }
+
+  .admin-nav-link {
+    padding: 9px 13px;
+    font-size: 12px;
+  }
+
+  .admin-main {
+    padding: 25px 15px;
+  }
+}
